@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+{% load static %}
+<!-- START head -->
+{% block title %}
+    Meet Brian | Brian Girer - Product Designer & Full Stack Developer
+{% endblock title %}
+
+{% block extra_meta %}
+    <meta name="twitter:image" content="{% static 'images/opengraph.png' %}">
+    <meta property="og:image" content="{% static 'images/opengraph.png' %}">
+{% endblock extra_meta %}
+
+{% block extra_css %}
+{% endblock extra_css %}
+<!-- END head -->
+<!-- START body -->
+{% block body %}
+    {% include 'navbar.html' %}
+    <section class="push-40-t">
+        <div class="container">
+            <h1 class="push-40-t">Brian Girer</h1>
+            <h2 class="h3 h3-alt push-15-t">Designer. Developer. Entrepreneur. Climber. Dude (named Brian).</h2>
+            <div class="push-100-t"></div>
+        </div>
+    </section>
+    <section class="bg-white">
+        <div class="container bio-container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h3 class="push-40-t text-primary h3-alt font-w400 font-s14">ABOUT</h3>
+                </div>
+                <div class="col-md-9">
+                    <p class="font-s24 push-30-t">
+                        I'm a product designer, full stack developer and entrepreneur based in
+                        San Diego, where I currently co-own & operate
+                        <a href="http://sdrealestate.expert/" class="text-default" target="_blank">a real estate
+                            marketing firm</a>. I've also helped companies like Adobe and
+                        <a href="https://dayton.services/" class="text-default" target="_blank">Dayton</a>
+                        with product design, web design and full-stack development projects.
+                    </p>
+                    <p class="font-s20 push-20-t">
+                        Currently, I am seeking full-time employment in Los Angeles. If you're interested in working
+                        with me,
+                        <a href="#" class="text-default" data-target="#contact-modal" data-toggle="modal">please don't
+                            hesitate to reach out.</a>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <h3 class="push-40-t text-primary h3-alt font-w400 font-s14">STACK</h3>
+                </div>
+                <div class="col-md-9">
+                    <h4 class="font-s24 push-30-t">
+                        Design
+                    </h4>
+                    <p class="font-s20 push-15-t">Sketch | Photoshop | InVision | Kactus | Balsamiq</p>
+                    <h4 class="font-s24 push-30-t">
+                        Development
+                    </h4>
+                    <p class="font-s20 push-15-t">Python | Django | Bootstrap | jQuery | LESS | Gulp | PostgreSQL |
+                        Ubuntu |
+                        Nginx</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <h3 class="push-40-t text-primary h3-alt font-w400 font-s14">EDUCATION</h3>
+                </div>
+                <div class="col-md-9">
+                    <p class="font-s24 push-30-t"><span class="font-w500">B.S. Mass Communication</span> Boston
+                        University, 2014</p>
+                    <p class="font-s20 push-10-t">Major: Advertising | Minor: Linguistics</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <h3 class="push-40-t text-primary h3-alt font-w400 font-s14">MORE</h3>
+                </div>
+                <div class="col-md-9">
+                    <p class="font-s24 push-30-t">When I'm not exporting assets or defining
+                        view classes, you can find me peak-bagging, rock climbing, dogsitting,
+                        skiing, sipping coffee (or whisky, depending on the time of day),
+                        playing drums or reading.
+                    </p>
+                    <p class="font-s20 push-15-t">You can follow my adventures on
+                        <a class="text-default" href="https://instagram.com/adudenamedbrian"
+                           target="_blank">Instagram</a>,
+                        <a class="text-default" href="https://twitter.com/adudenamedbrian">Twitter</a>, or <a
+                                class="text-default"
+                                href="https://reddit.com/u/adudenamedbrian">Reddit</a></p>
+                    <div class="row push-30-t">
+                        <div class="col-xs-6">
+                            <h4 class="h4-alt text-center">Current Jam</h4>
+                            <img src="{% static 'images/o-lucky-man_cropped.jpg' %}"
+                                 alt="O Lucky Man! Soundtrack by Alan Price"
+                                 class="img-responsive img-thumbnail push-15-t">
+                        </div>
+                        <div class="col-xs-6">
+                            <h4 class="h4-alt text-center">Current Read</h4>
+                            <img src="{% static 'images/the-push_cropped.jpg' %}" alt="The Push by Tommy Caldwell"
+                                 class="img-responsive img-thumbnail push-15-t">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <h3 class="push-40-t text-primary h3-alt font-w400 font-s14">ABOUT THIS SITE</h3>
+                </div>
+                <div class="col-md-9">
+                    <p class=" font-s20 push-30-t">
+                        This site's frontend was built from scratch with <a class="text-default"
+                                                                            href="http://lesscss.org/"
+                                                                            target="_blank">LESS</a>,
+                        <a class="text-default" href="https://getbootstrap.com" target="_blank">Bootstrap</a>,
+                        <a class="text-default" target="_blank" href="http://jquery.org/">jQuery</a>
+                        and <a class="text-default" href="http://scrollmagic.io/" target="_blank">ScrollMagic</a>.
+                        Behind the scenes are an
+                        <a class="text-default" href="https://aws.amazon.com/ec2/" target="_blank">EC2 server</a> with
+                        static assets
+                        provided by
+                        <a class="text-default" href=https://aws.amazon.com/cloudfront/" target="_blank">CloudFront</a> and a
+                        simple
+                        <a class="text-default" href="https://www.djangoproject.com/" target="_blank">Django</a>
+                        application to serve it all up.
+                    </p>
+                </div>
+            </div>
+            <div class="push-60-t"></div>
+        </div>
+    </section>
+    {% include 'footer.html' %}
+{% endblock body %}
+{% block extra_js %}
+    <!-- Vendor scripts -->
+    <!-- App scripts -->
+{% endblock extra_js %}
+<!-- END body -->

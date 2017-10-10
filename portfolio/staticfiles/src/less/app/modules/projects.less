@@ -1,0 +1,75 @@
+// Project color palettes section
+.project-color-palette .color-palettes {
+  padding-left: 3vw;
+  & .caption {
+    margin-top: -20%;
+    margin-left: -11%;
+  }
+}
+
+// Project typography section
+// Mixin for project typography
+.project-font(@typefaceName) {
+  padding-left: 10vw;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: @typefaceName;
+    font-weight: 500;
+    color: @color-green-medium;
+  }
+  p {
+    color: @color-green-light;
+    font-family: @typefaceName;
+    font-weight: 400;
+  }
+}
+
+.project-font__source-sans {
+  @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+  .project-font("Source Sans Pro", sans-serif;);
+}
+
+.project-font__open-sans {
+  @import url("https://fonts.googleapis.com/css?family=Open+Sans");
+  .project-font("Open Sans", sans-serif;);
+}
+
+.project-font__droid-serif {
+  @import url("https://fonts.googleapis.com/css?family=Droid+Serif");
+  .project-font("Droid Serif", "Georgia", serif;);
+}
+
+.project-font__roboto {
+  @import url("https://fonts.googleapis.com/css?family=Roboto");
+  .project-font("Roboto", sans-serif;);
+}
+
+.project-font__avenir {
+  @import url("https://fonts.googleapis.com/css?family=Avenir");
+  .project-font("Avenir", sans-serif;);
+}
+
+.project-font__montserrat {
+  @import url("https://fonts.googleapis.com/css?family=Montserrat");
+  .project-font("Montserrat", sans-serif;);
+}
+
+// Project solution section
+.project-solution-container {
+  padding-left: 10vw;
+  @media (min-width: 992px) {
+    padding-right: 1vw;
+  }
+}
+
+// Project stack container
+
+.project-stack {
+  padding: 3vh 10vw;
+}
+
+.project-stack-logos {
+  padding-top: 7vh;
+  img {
+    padding-bottom: 5vh;
+  }
+}

@@ -1,0 +1,27 @@
+.body {
+  background-color: @body-bg-color;
+  font-family: @body-font-family, "Helvetica Neue", Helvetica, sans-serif;
+  color: @font-color;
+}
+
+.tooltip-inner {
+  padding: 6px 8px;
+  background-color: @color-gray-dark;
+  color: @color-white;
+}
+
+.tooltip {
+  &.top .tooltip-arrow {
+    border-top-color: @color-gray-dark;
+  }
+  &.right .tooltip-arrow {
+    border-right-color: @color-gray-dark;
+  }
+  &.left .tooltip-arrow {
+    border-left-color: @color-gray-dark;
+  }
+  &.bottom .tooltip-arrow {
+    border-bottom-color: @color-gray-dark;
+  }
+}
+

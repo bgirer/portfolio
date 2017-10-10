@@ -1,0 +1,48 @@
+{% load static %}
+{% load bootstrap3 %}
+<div class="alert alert-danger alert-dismissible" id="empty_form_fields" style="display: none">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <strong>Woops!</strong> Please fill out all required fields
+</div>
+<div class="alert alert-danger alert-dismissible" id="form_failed" style="display: none">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <strong>Uh oh!</strong> Something went wrong on our end. Please try submitting this form later.
+</div>
+<div class="alert alert-info alert-dismissible" id="form_sending" style="display: none">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <strong><i class="fa fa-spinner fa-spin"></i></strong> Submitting...
+</div>
+<div class="alert alert-success alert-dismissible" id="form_success" style="display: none">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <strong>Thanks!</strong> Message sent!
+</div>
+<form action="{% url 'small-form' %}" method="POST" id="modal-form">
+    {% csrf_token %}
+    <div class="row">
+        <div class="col-sm-6">
+            {% bootstrap_field form.first_name %}
+        </div>
+        <div class="col-sm-6">
+            {% bootstrap_field form.last_name %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            {% bootstrap_field form.email %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            {% bootstrap_field form.message %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            {% buttons %}
+                <button type="submit" class="btn btn-primary btn-noborder" id="home-modal-form-submit">
+                    Submit
+                </button>
+            {% endbuttons %}
+        </div>
+    </div>
+</form>

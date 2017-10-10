@@ -1,0 +1,207 @@
+{% extends 'base.html' %}
+{% load static %}
+<!-- START head -->
+{% block title %}
+    Upsell Realtor | Enabling Real Estate Agents to Access Home Services Affiliate Programs | Brian Girer - Product
+    Designer & Full Stack Developer
+{% endblock title %}
+
+{% block extra_meta %}
+    <meta name="twitter:image" content="{% static 'images/heros/upsell-realtor.jpg' %}">
+    <meta property="og:image" content="{% static 'images/heros/upsell-realtor.jpg' %}">
+{% endblock extra_meta %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/vendor/jquery-ui.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/slick.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/slick-theme.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/ekko-lightbox.min.css' %}">
+{% endblock extra_css %}
+<!-- END head -->
+<!-- START body -->
+{% block body %}
+    {% include 'navbar.html' %}
+    <div class="project-navigation" id="project-navigation" hidden>
+        <div class="container-fluid">
+            <h1 class="font-s28 push-60-t font-w400">Upsell Realtor</h1>
+            <div class="project-navigation__links push-40-t">
+                <p><a href="#" data-target="#project-scope">Project Details</a></p>
+                <p class="push-15-t"><a href="#" data-target="#color-palette">Color Palette</a></p>
+                <p class="push-15-t"><a href="#" data-target="#typography">Typography</a></p>
+                <p class="push-15-t"><a href="#" data-target="#solution">Solution</a></p>
+            </div>
+            <div class="project-pagination">
+                <p>
+                    <a href="{% url 'snapnote' %}" class="text-primary">
+                        Next Project ≫
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <section class="project-hero" style="background-image: url({% static 'images/heros/upsell-realtor.jpg' %})">
+    </section>
+    <section class="project-details">
+        <div class="container-fluid push-60-t">
+            <div class="project-scope" id="project-scope">
+                <h2 class="text-default text-center">Project Details</h2>
+                <p class="lead text-primary-darker text-center push-40-t">
+                    Helping real estate agents supplement their income using home service
+                    affiliate programs.
+                </p>
+                <ul class="project-scope-list">
+                    <li>
+                        Real estate agents are uniquely well positioned to earn affiliate
+                        income from home services, but rarely take advantage of these
+                        programs.
+                    </li>
+                    <li>
+                        Interviews with agents told us that many of them are unaware of
+                        the existence of such programs, how to enroll in them or how to
+                        properly offer home services to home-buying clients.
+                    </li>
+                    <li>
+                        Our goal: create a platform that provides a centralized dashboard
+                        where real estate professionals can learn about, enroll in,
+                        advertise, track and manage their home service affiliates.
+                    </li>
+                </ul>
+            </div>
+            <div class="project-color-palette push-60-t" id="color-palette">
+                <h2 class="text-default text-center">Color Palette</h2>
+                <div class="row color-palettes">
+                    <div class="col-sm-6">
+                        <img src="{% static 'images/color-palettes/upsell-realtor/main-color@2x.png' %}" alt=""
+                             class="img-responsive">
+                        <h4 class="text-center caption">Sunglo</h4>
+                    </div>
+                    <div class="col-sm-6">
+                        <img src="{% static 'images/color-palettes/upsell-realtor/secondary-color@2x.png' %}" alt=""
+                             class="img-responsive">
+                        <h4 class="text-center caption">Danube</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="project-typography push-60-t" id="typography">
+                <h2 class="text-default text-center">Typography</h2>
+                <div class="row push-60-t">
+                    <div class="project-font__source-sans col-sm-6">
+                        <h4 class="font-s32 font-w500">Source Sans Pro</h4>
+                        <p class="font-s28 push-15-t">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv
+                            Ww Xx Yy Zz</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project-solution push-60-t" id="solution">
+                <h2 class="text-default text-center">Solution</h2>
+                <p class="font-s16 text-center push-15-t">
+                    <a href="https://invis.io/5TDNJK4BG" class="text-primary" target="_blank">Dashboard Prototype</a> |
+                    <a href="http://upsellrealtor.com/" class="text-primary" target="_blank">Live Site</a>
+                </p>
+                <div class="project-solution-container">
+                    <div class="row push-60-t">
+                        <div class="col-md-3">
+                            <h3 class="push-40-t text-primary h3-alt font-w400 font-s14">DISCOVERY</h3>
+                        </div>
+                        <div class="col-md-9">
+                            <p class="push-30-t font-s18">
+                                The first challenge to overcome was discovery. Research
+                                showed that many agents are unaware that home
+                                services affiliate sales programs exist. So, the site
+                                needed a frontend that quickly explained what these
+                                services were and, more importantly, the dollar value
+                                with which such services can supplement an agent's income.
+                            </p>
+                            <a href="{% static 'images/screens/upsell-realtor/upsell-realtor-landing-page.png' %}"
+                               data-toggle="lightbox">
+                                <img src="{% static 'images/screens/upsell-realtor/upsell-realtor-landing-page.png' %}"
+                                     alt="Upsell Realtor Dashboard" class="img-responsive"/>
+                            </a>
+                            <p class="push-15-t font-s18">
+                                To achieve this, my design for the landing page was
+                                centered around introducing affiliate programs and
+                                driving conversions.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row push-60-t">
+                        <div class="col-md-3">
+                            <h3 class="push-40-t text-primary h3-alt font-w400 font-s14">DRIVING CONVERSIONS</h3>
+                        </div>
+                        <div class="col-md-9">
+                            <p class="push-30-t font-s18">
+                                When a new user enters the sign-up process, I had to
+                                respect the busy, hectic lifestyle of a real estate
+                                agent. A complex form could easily lead potential users
+                                to abandon the process early.
+                            </p>
+                            <a href="{% static 'images/screens/upsell-realtor/upsell-realtor-signup.png' %}"
+                               data-toggle="lightbox">
+                                <img src="{% static 'images/screens/upsell-realtor/upsell-realtor-signup.png' %}"
+                                     alt="Upsell Realtor Dashboard" class="img-responsive"/>
+                            </a>
+                            <p class="push-15-t font-s18">
+                                The resulting interface featured a simple sign-up form
+                                requiring only basic details, with options to enroll via
+                                social login APIs as well.
+                            </p>
+                            <p class="push-15-t font-s18">
+                                Following the basic signup, users are taken to their
+                                dashboard, where an additional form allows them to enter
+                                the remaining required information. This interaction flow
+                                neatly reconciled the problem of bouncing visitors at
+                                sign up with the need for detailed business and payment
+                                information.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row push-60-t">
+                        <div class="col-md-3">
+                            <h3 class="push-40-t text-primary h3-alt font-w400 font-s14">ONBOARDING</h3>
+                        </div>
+                        <div class="col-md-9">
+                            <p class="push-30-t font-s18">
+                                Once users have set up their accounts, they can begin
+                                enrolling in local home service affiliate programs. Since
+                                the sign-up processes for these programs differs from
+                                provider to provider, we simplify things by allowing
+                                users to request affiliate programs by zip code, while
+                                Upsell Realtor handles the enrollment process manually.
+                            </p>
+                            <a href="{% static 'images/screens/upsell-realtor/upsell-realtor-dashboard.png' %}"
+                               data-toggle="lightbox">
+                                <img src="{% static 'images/screens/upsell-realtor/upsell-realtor-dashboard.png' %}"
+                                     alt="Upsell Realtor Dashboard" class="img-responsive"/>
+                            </a>
+                            <p class="push-15-t font-s18">
+                                Once an agent is enrolled, they can access resources to
+                                help advertise their affiliate services to clients, as
+                                well as track and manage their sales. The dashboard
+                                provides in-depth tables and charts to help users monitor
+                                their revenue.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="project-pagination visible-sm visible-xs">
+            <p>
+                <a href="{% url 'snapnote' %}" class="text-primary">
+                    Next Project ≫
+                </a>
+            </p>
+        </div>
+        <div class="push-60-t">&nbsp;</div>
+    </section>
+
+{% endblock body %}
+{% block extra_js %}
+    <!-- Vendor scripts -->
+    <script src="{% static 'js/vendor/jquery-ui.min.js' %}"></script>
+    <script src="{% static 'js/vendor/ScrollMagic.min.js' %}"></script>
+    <script src="{% static 'js/vendor/ekko-lightbox.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/vendor/slick.min.js' %}" type="text/javascript"></script>
+    <!-- App scripts -->
+    <script src="{% static 'js/app/project.min.js' %}"></script>
+{% endblock extra_js %}

@@ -1,0 +1,305 @@
+{% extends 'base.html' %}
+{% load static %}
+<!-- START head -->
+{% block title %}
+    Casa | On-Demand Real Estate Agent App Concept | Brian Girer - Product Designer & Full Stack Developer
+{% endblock title %}
+
+{% block extra_meta %}
+    <meta name="twitter:image" content="{% static 'images/heros/casa.jpg' %}">
+    <meta property="og:image" content="{% static 'images/heros/casa.jpg' %}">
+{% endblock extra_meta %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/vendor/jquery-ui.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/ekko-lightbox.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/slick.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/slick-theme.min.css' %}">
+{% endblock extra_css %}
+<!-- END head -->
+<!-- START body -->
+{% block body %}
+    {% include 'navbar.html' %}
+    <div class="project-navigation" id="project-navigation" hidden>
+        <div class="container-fluid">
+            <h1 class="font-s28 push-60-t font-w400">Casa</h1>
+            <div class="project-navigation__links push-40-t">
+                <p><a href="#" data-target="#project-scope">Project Details</a></p>
+                <p class="push-15-t"><a href="#" data-target="#color-palette">Color Palette</a></p>
+                <p class="push-15-t"><a href="#" data-target="#typography">Typography</a></p>
+                <p class="push-15-t"><a href="#" data-target="#solution">Solution</a></p>
+            </div>
+            <div class="project-pagination">
+                <p>
+                    <a href="{% url 'dayton' %}" class="text-primary">
+                        Next Project ≫
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <section class="project-hero" style="background-image: url({% static 'images/heros/casa.jpg' %})">
+    </section>
+    <section class="project-details">
+        <div class="container-fluid push-60-t">
+            <div class="project-scope" id="project-scope">
+                <h2 class="text-default text-center">Prototyping Casa</h2>
+                <p class="lead text-primary-darker text-center push-40-t">On-demand real estate property showings.</p>
+                <ul class="project-scope-list">
+                    <li>
+                        Today’s urban real estate markets are some of the fastest-moving
+                        environments in the business world. However, much of the
+                        technology that the real estate industry uses is stuck in Web 1.0.
+                    </li>
+                    <li>
+                        To meet the demands of highly dynamic markets, I co-created Casa,
+                        a concept for an on-demand platform that allows homebuyers and
+                        investors to browse listings and book home showing appointments
+                        in real-time.
+                    </li>
+                </ul>
+            </div>
+            <div class="project-color-palette push-60-t" id="color-palette">
+                <h2 class="text-default text-center">Color Palette</h2>
+                <div class="row color-palettes">
+                    <div class="col-sm-6">
+                        <img src="{% static 'images/color-palettes/casa/main-color@2x.png' %}" alt=""
+                             class="img-responsive">
+                        <h4 class="text-center caption">Paradiso</h4>
+                    </div>
+                    <div class="col-sm-6">
+                        <img src="{% static 'images/color-palettes/casa/secondary-color@2x.png' %}" alt=""
+                             class="img-responsive">
+                        <h4 class="text-center caption">Tundora</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="project-typography push-60-t" id="typography">
+                <h2 class="text-default text-center">Typography</h2>
+                <div class="row push-60-t">
+                    <div class="project-font__source-sans col-sm-6">
+                        <h4 class="font-s32 font-w500">Source Sans Pro</h4>
+                        <p class="font-s28 push-15-t">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv
+                            Ww Xx Yy Zz</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project-solution push-60-t" id="solution">
+                <h2 class="text-default text-center">Solution</h2>
+                <div class="project-solution-container">
+                    <div class="row push-60-t">
+                        <div class="col-md-3">
+                            <h3 class="push-40-t text-primary h3-alt font-w400 font-s14">SCOPE</h3>
+                        </div>
+                        <div class="col-md-9">
+                            <p class="push-30-t font-s18">
+                                I intentionally limited the scope of Casa’s prototype,
+                                leaving room for the potential to scale. After speaking
+                                with real estate agents in the San Diego area and recent
+                                homebuyers, I carefully laid out the interaction flow for
+                                Casa. Users can:
+                            </p>
+                            <ol>
+                                <li>
+                                    Browse local listings, with data constantly updated
+                                    from the local Multiple Listing Service (MLS),
+                                </li>
+                                <li>
+                                    Bookmark their favorite properties,
+                                </li>
+                                <li>
+                                    Or request a nearby, active agent to show them any
+                                    property for sale.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="row push-60-t">
+                        <div class="col-md-3">
+                            <h3 class="push-40-t text-primary h3-alt font-w400 font-s14">EXPERIENCE</h3>
+                        </div>
+                        <div class="col-md-9">
+                            <p class="push-30-t font-s18">
+                                Behind the scenes, on-demand platforms like this can
+                                quickly become very complex. But simple is almost always
+                                better when it comes to service-based applications, so
+                                Casa is designed to uphold this principle.
+                            </p>
+                            <p class="push-15-t font-s18">
+                                Building the Casa prototype was a meditation in saying
+                                ‘no’. Many features were proposed for Casa, but only a
+                                few core functionalities made the cut. For example, the
+                                app does away with review systems commonly found in
+                                on-demand apps like Lyft and Postmates.
+                            </p>
+                            <ul class="solution-images-carousel">
+                                <li>
+                                    <a href="{% static 'images/screens/casa/casa-screen-1@2x.png' %}"
+                                       data-toggle="lightbox" data-gallery="casa-gallery">
+                                        <img src="{% static 'images/screens/casa/casa-screen-1.png' %}"
+                                             class="img-responsive">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% static 'images/screens/casa/casa-screen-2@2x.png' %}"
+                                       data-toggle="lightbox" data-gallery="casa-gallery">
+                                        <img src="{% static 'images/screens/casa/casa-screen-2.png' %}"
+                                             class="img-responsive">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% static 'images/screens/casa/casa-screen-3@2x.png' %}"
+                                       data-toggle="lightbox" data-gallery="casa-gallery">
+                                        <img src="{% static 'images/screens/casa/casa-screen-3.png' %}"
+                                             class="img-responsive">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% static 'images/screens/casa/casa-screen-4@2x.png' %}"
+                                       data-toggle="lightbox" data-gallery="casa-gallery">
+                                        <img src="{% static 'images/screens/casa/casa-screen-4.png' %}"
+                                             class="img-responsive">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% static 'images/screens/casa/casa-screen-5@2x.png' %}"
+                                       data-toggle="lightbox" data-gallery="casa-gallery">
+                                        <img src="{% static 'images/screens/casa/casa-screen-5.png' %}"
+                                             class="img-responsive">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% static 'images/screens/casa/casa-screen-6@2x.png' %}"
+                                       data-toggle="lightbox" data-gallery="casa-gallery">
+                                        <img src="{% static 'images/screens/casa/casa-screen-6.png' %}"
+                                             class="img-responsive">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% static 'images/screens/casa/casa-screen-7@2x.png' %}"
+                                       data-toggle="lightbox" data-gallery="casa-gallery">
+                                        <img src="{% static 'images/screens/casa/casa-screen-7.png' %}"
+                                             class="img-responsive">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% static 'images/screens/casa/casa-screen-8@2x.png' %}"
+                                       data-toggle="lightbox" data-gallery="casa-gallery">
+                                        <img src="{% static 'images/screens/casa/casa-screen-8.png' %}"
+                                             class="img-responsive">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% static 'images/screens/casa/casa-screen-9@2x.png' %}"
+                                       data-toggle="lightbox" data-gallery="casa-gallery">
+                                        <img src="{% static 'images/screens/casa/casa-screen-9.png' %}"
+                                             class="img-responsive">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% static 'images/screens/casa/casa-screen-10@2x.png' %}"
+                                       data-toggle="lightbox" data-gallery="casa-gallery">
+                                        <img src="{% static 'images/screens/casa/casa-screen-10.png' %}"
+                                             class="img-responsive">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% static 'images/screens/casa/casa-screen-11@2x.png' %}"
+                                       data-toggle="lightbox" data-gallery="casa-gallery">
+                                        <img src="{% static 'images/screens/casa/casa-screen-11.png' %}"
+                                             class="img-responsive">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% static 'images/screens/casa/casa-screen-12@2x.png' %}"
+                                       data-toggle="lightbox" data-gallery="casa-gallery">
+                                        <img src="{% static 'images/screens/casa/casa-screen-12.png' %}"
+                                             class="img-responsive">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% static 'images/screens/casa/casa-screen-13@2x.png' %}"
+                                       data-toggle="lightbox" data-gallery="casa-gallery">
+                                        <img src="{% static 'images/screens/casa/casa-screen-13.png' %}"
+                                             class="img-responsive">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% static 'images/screens/casa/casa-screen-14@2x.png' %}"
+                                       data-toggle="lightbox" data-gallery="casa-gallery">
+                                        <img src="{% static 'images/screens/casa/casa-screen-14.png' %}"
+                                             class="img-responsive">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% static 'images/screens/casa/casa-screen-15@2x.png' %}"
+                                       data-toggle="lightbox" data-gallery="casa-gallery">
+                                        <img src="{% static 'images/screens/casa/casa-screen-15.png' %}"
+                                             class="img-responsive">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% static 'images/screens/casa/casa-screen-16@2x.png' %}"
+                                       data-toggle="lightbox" data-gallery="casa-gallery">
+                                        <img src="{% static 'images/screens/casa/casa-screen-16.png' %}"
+                                             class="img-responsive">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% static 'images/screens/casa/casa-screen-17@2x.png' %}"
+                                       data-toggle="lightbox" data-gallery="casa-gallery">
+                                        <img src="{% static 'images/screens/casa/casa-screen-17.png' %}"
+                                             class="img-responsive">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row push-60-t">
+                        <div class="col-md-3">
+                            <h3 class="push-40-t text-primary h3-alt font-w400 font-s14">INTERFACE</h3>
+                        </div>
+                        <div class="col-md-9">
+                            <p class="push-30-t font-s18">
+                                The interface of the Casa prototype is purposefully
+                                limited in color. I opted for a primarily grayscale
+                                palette, allowing for the action items with color to pop.
+                                This method helps speed up the process of browsing
+                                listings and requesting appointments by limiting
+                                distractions.
+                            </p>
+                            <p class="push-15-t font-s18">
+                                Casa allows users to perform a set of tasks centered
+                                around booking property viewings. The main screen is a
+                                map displaying nearby listings. From there, a consumer
+                                can view individual listings, bookmark them and view
+                                their already bookmarked homes. They can also request an
+                                appointment to meet a realtor for a home showing and
+                                search listings in other locations.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="project-pagination visible-sm visible-xs">
+            <p>
+                <a href="{% url 'dayton' %}" class="text-primary">
+                    Next Project ≫
+                </a>
+            </p>
+        </div>
+        <div class="push-60-t">&nbsp;</div>
+    </section>
+
+{% endblock body %}
+{% block extra_js %}
+    <!-- Vendor scripts -->
+    <script src="{% static 'js/vendor/jquery-ui.min.js' %}"></script>
+    <script src="{% static 'js/vendor/ScrollMagic.min.js' %}"></script>
+    <script src="{% static 'js/vendor/ekko-lightbox.min.js' %}"></script>
+    <script src="{% static 'js/vendor/slick.min.js' %}"></script>
+    {#    <script src="{% static 'js/vendor/plugins/debug.addIndicators.min.js' %}"></script>#}
+    <!-- App scripts -->
+    <script src="{% static 'js/app/project.min.js' %}"></script>
+{% endblock extra_js %}

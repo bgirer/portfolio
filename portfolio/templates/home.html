@@ -1,0 +1,164 @@
+{% extends 'base.html' %}
+{% load static %}
+<!-- START head -->
+{% block title %}
+    Portfolio | Brian Girer - Product Designer & Full Stack Developer
+{% endblock title %}
+
+{% block extra_meta %}
+    <meta name="twitter:image" content="{% static 'images/opengraph.png' %}">
+    <meta property="og:image" content="{% static 'images/opengraph.png' %}">
+{% endblock extra_meta %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/vendor/slick.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/slick-theme.min.css' %}">
+{% endblock extra_css %}
+<!-- END head -->
+<!-- START body -->
+{% block body %}
+    {% include 'navbar.html' %}
+    <!-- BEGIN Lead -->
+    <div class="jumbotron">
+        <div class="container">
+            <div class="row push-30-t">
+                <div class="col-md-10 col-md-offset-1" id="home-lead">
+                    <h1>Hello, I’m Brian Girer, a product designer, full stack developer & entrepreneur focused on
+                        creating software for humans.</h1>
+                    <p class="push-20-t"><a class="text-primary font-s18 font-w500" href="{% url 'about' %}">Get to know
+                        me <span class="font-s14">→</span></a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END Lead -->
+    <div id="home__work-bg-scroll-target"></div>
+    <!-- BEGIN Work  -->
+    <section id="work" class="section work-container work hidden-sm hidden-xs">
+        <div class="work-container__inner">
+            <div class="work-container__box">
+            </div>
+            <div class="list work-container__list" id="project-nav-links">
+                <h2 class="text-primary font-s14 font-w400 push-50-t">
+                    WORK
+                </h2>
+                <p class="push-50-t"><a href="#" data-target="#upsell-realtor" class="active">Upsell Realtor</a>
+                </p>
+                <p><a href="#" data-target="#snapnote">Snapnote</a></p>
+                <p class="push-15-t"><a href="#" data-target="#casa">Casa</a></p>
+                <p><a href="#" data-target="#dayton">Dayton Services</a></p>
+                <p class="push-15-t"><a href="#" data-target="#sdree">SD Real Estate Experts</a></p>
+            </div>
+            <div class="work-container__projects">
+                <div id="upsell-realtor" class="project-preview">
+                    <a href="{% url 'upsell-realtor' %}">
+                        <button class="btn btn-primary-light btn-noborder btn-lg">Upsell Realtor</button>
+                    </a>
+                    <span class="project-preview__background"
+                          style="background-image: url({% static 'images/heros/upsell-realtor.jpg' %})"></span>
+                </div>
+                <div id="snapnote" class="project-preview">
+                    <a href="{% url 'snapnote' %}">
+                        <button class="btn btn-primary-light btn-noborder btn-lg">Snapnote</button>
+                    </a>
+                    <span class="project-preview__background"
+                          style="background-image: url({% static 'images/heros/snapnote.jpg' %})"></span>
+                </div>
+                <div id="casa" class="project-preview">
+                    <a href="{% url 'casa' %}">
+                        <button class="btn btn-primary-light btn-noborder btn-lg">Casa</button>
+                    </a>
+                    <span class="project-preview__background"
+                          style="background-image: url({% static 'images/heros/casa.jpg' %})"></span>
+                </div>
+                <span id="dev-projects"></span>
+                <div id="dayton" class="project-preview">
+                    <a href="{% url 'dayton' %}">
+                        <button class="btn btn-primary-light btn-noborder btn-lg">Dayton, Inc</button>
+                    </a>
+                    <span class="project-preview__background"
+                          style="background-image: url({% static 'images/heros/dayton.jpg' %})"></span>
+                </div>
+                <div id="sdree" class="project-preview">
+                    <a href="{% url 'sdree' %}">
+                        <button class="btn btn-primary-light btn-noborder btn-lg">SD Real Estate Experts</button>
+                    </a>
+                    <span class="project-preview__background"
+                          style="background-image: url({% static 'images/heros/sdree.jpg' %})"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section work-container__mobile visible-sm visible-xs">
+        <h2 class="text-default text-center">WORK</h2>
+        <ul id="work-container__mobile-slides" class="push-40-t">
+            <li>
+                <div class="text-center" id="upsell-realtor__mobile">
+                    <img src="{% static 'images/heros/upsell-realtor.jpg' %}" class="img-responsive img-rounded">
+                    <h3 class="h3-alt push-60-t">
+                        Upsell Realtor
+                    </h3>
+                    <a class="btn btn-primary btn-noborder btn-lg push-30-t" href="{% url 'upsell-realtor' %}">
+                        See Details
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="text-center" id="snapnote__mobile">
+                    <img src="{% static 'images/heros/snapnote.jpg' %}" class="img-responsive img-rounded">
+                    <h3 class="h3-alt push-60-t">
+                        Snapnote
+                    </h3>
+                    <a class="btn btn-primary btn-noborder btn-lg push-30-t" href="{% url 'snapnote' %}">
+                        See Details
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="text-center" id="casa__mobile">
+                    <img src="{% static 'images/heros/casa.jpg' %}" class="img-responsive img-rounded">
+                    <h3 class="h3-alt push-60-t">
+                        Casa
+                    </h3>
+                    <a class="btn btn-primary btn-noborder btn-lg push-30-t" href="{% url 'casa' %}">
+                        See Details
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="text-center" id="dayton__mobile">
+                    <img src="{% static 'images/heros/dayton.jpg' %}" class="img-responsive img-rounded">
+                    <h3 class="h3-alt push-60-t">
+                        Dayton, Inc
+                    </h3>
+                    <a class="btn btn-primary btn-noborder btn-lg push-30-t" href="{% url 'dayton' %}">
+                        See Details
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="text-center" id="sdree__mobile">
+                    <img src="{% static 'images/heros/sdree.jpg' %}" class="img-responsive img-rounded">
+                    <h3 class="h3-alt push-60-t">
+                        SD Real Estate Experts
+                    </h3>
+                    <a class="btn btn-primary btn-noborder btn-lg push-30-t" href="{% url 'sdree' %}">
+                        See Details
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <!-- END Work  -->
+{% endblock body %}
+
+{% block extra_js %}
+    <!-- Vendor scripts -->
+    <script src="{% static 'js/vendor/plugins/TweenMax.min.js' %}"></script>
+    <script src="{% static 'js/vendor/ScrollMagic.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/vendor/slick.min.js' %}" type="text/javascript"></script>
+    <!-- App scripts -->
+    <script src="{% static 'js/app/home.min.js' %}"></script>
+{% endblock extra_js %}
+
+<!-- END body -->

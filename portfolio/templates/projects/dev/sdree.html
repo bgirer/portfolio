@@ -1,0 +1,270 @@
+{% extends 'base.html' %}
+{% load static %}
+<!-- START head -->
+{% block title %}
+    SD Real Estate Experts | Full-Featured Real Estate Search Engine Optimized for SEM | Brian Girer - Product Designer
+    & Full Stack Developer
+{% endblock title %}
+
+{% block extra_meta %}
+    <meta name="twitter:image" content="{% static 'images/heros/sdree.jpg' %}">
+    <meta property="og:image" content="{% static 'images/heros/sdree.jpg' %}">
+{% endblock extra_meta %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/vendor/jquery-ui.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/slick.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/slick-theme.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/ekko-lightbox.min.css' %}">
+{% endblock extra_css %}
+<!-- END head -->
+<!-- START body -->
+{% block body %}
+    {% include 'navbar.html' %}
+    <div class="project-navigation" id="project-navigation" hidden>
+        <div class="container-fluid">
+            <h1 class="font-s28 push-60-t font-w400">San Diego Real Estate Experts</h1>
+            <div class="project-navigation__links push-40-t">
+                <p><a href="#" data-target="#project-scope">Project Scope</a></p>
+                <p class="push-15-t"><a href="#" data-target="#stack">Stack</a></p>
+                <p class="push-15-t"><a href="#" data-target="#color-palette">Color Palette</a></p>
+                <p class="push-15-t"><a href="#" data-target="#typography">Typography</a></p>
+                <p class="push-15-t"><a href="#" data-target="#solution">Solution</a></p>
+            </div>
+            <div class="project-pagination">
+                <p>
+                    <a href="{% url 'upsell-realtor' %}" class="text-primary">
+                        Next Project ≫
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <section class="project-hero" style="background-image: url({% static 'images/heros/sdree.jpg' %})">
+    </section>
+    <section class="project-details">
+        <div class="container-fluid push-60-t">
+            <div class="project-scope" id="project-scope">
+                <h2 class="text-default text-center">Project Scope</h2>
+                <p class="lead text-primary-darker text-center push-40-t">An SEO-driven real estate search engine for
+                    San Diego listings.</p>
+                <ul class="project-scope-list">
+                    <li>
+                        I co-founded San Diego Real Estate Experts, a real estate
+                        marketing company that focuses on referrals.
+                    </li>
+                    <li>
+                        The company site features fully detailed listings, search,
+                        neighborhood information and helpful guides for consumers to
+                        learn about best practices when purchasing a home.
+                    </li>
+                    <li>
+                        Using RETS technology, I created a custom, reusable backend for
+                        populating Django models with listings data from the local
+                        Multiple Listing Service (MLS), Sandicor.
+                    </li>
+                </ul>
+            </div>
+            <div class="project-stack" id="stack">
+                <h2 class="text-default text-center">Technology Stack</h2>
+                <div class="row project-stack-logos">
+                    <div class="col-xs-4"><img src="{% static 'images/logos/django@2x.png' %}" class="img-responsive"
+                                               alt="Django Project"></div>
+                    <div class="col-xs-4"><img src="{% static 'images/logos/python@2x.png' %}" class="img-responsive"
+                                               alt="Python"></div>
+                    <div class="col-xs-4"><img src="{% static 'images/logos/bootstrap@2x.png' %}" class="img-responsive"
+                                               alt="Bootstrap"></div>
+                    <div class="col-xs-4"><img src="{% static 'images/logos/jquery-logo@2x.png' %}"
+                                               class="img-responsive" alt="jQuery"></div>
+                    <div class="col-xs-4"><img src="{% static 'images/logos/reso@2x.png' %}" class="img-responsive"
+                                               alt="RESO"></div>
+                    <div class="col-xs-4"><img src="{% static 'images/logos/maxcdn@2x.png' %}" class="img-responsive"
+                                               alt="Maxcdn"></div>
+                </div>
+            </div>
+            <div class="project-color-palette push-60-t" id="color-palette">
+                <h2 class="text-default text-center">Color Palette</h2>
+                <div class="row color-palettes">
+                    <div class="col-sm-6">
+                        <img src="{% static 'images/color-palettes/sdree/main-color@2x.png' %}" alt=""
+                             class="img-responsive">
+                        <h4 class="text-center caption">Atomic Tangerine</h4>
+                    </div>
+                    <div class="col-sm-6">
+                        <img src="{% static 'images/color-palettes/sdree/secondary-color@2x.png' %}" alt=""
+                             class="img-responsive">
+                        <h4 class="text-center caption">Acapulco</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="project-typography push-60-t" id="typography">
+                <h2 class="text-default text-center">Typography</h2>
+                <div class="row push-60-t">
+                    <div class="project-font__montserrat col-sm-6">
+                        <h4 class="font-s32 font-w500">Montserrat</h4>
+                        <p class="font-s28 push-15-t">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv
+                            Ww Xx Yy Zz</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project-solution push-60-t" id="solution">
+                <h2 class="text-default text-center">Building the Site</h2>
+                <div class="project-solution-container">
+                    <div class="row push-60-t">
+                        <div class="col-md-3">
+                            <h3 class="push-40-t text-primary h3-alt font-w400 font-s14">SEO</h3>
+                        </div>
+                        <div class="col-md-9">
+                            <p class="push-30-t font-s18">
+                                Since this site is the main consumer-facing marketing
+                                tool for San Diego Real Estate Experts, search engine
+                                optimization informed every decision. The site features a
+                                range of articles and neighborhood detail pages, each
+                                with keyword-rich content.
+                            </p>
+                            <p class="push-15-t font-s18">
+                                In addition, each property detail page is designed to
+                                achieve high organic page rank for searches on that
+                                property address. This is accomplished though targeted
+                                headers, meta tags, image & anchor alts and robust
+                                property features content.
+                            </p>
+                            <ul class="solution-images-carousel">
+                                <li>
+                                    <a href="{% static 'images/screens/sdree/sdree-neighborhood-guide-parent.png' %}"
+                                       data-toggle="lightbox" data-gallery="seo-images">
+                                        <img src="{% static 'images/screens/sdree/sdree-neighborhood-guide-parent.png' %}"
+                                             class="img-responsive">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% static 'images/screens/sdree/sdree-neighborhood-guide.png' %}"
+                                       data-toggle="lightbox" data-gallery="seo-images">
+                                        <img src="{% static 'images/screens/sdree/sdree-neighborhood-guide.png' %}"
+                                             class="img-responsive">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% static 'images/screens/sdree/sdree-buyers-guide.png' %}"
+                                       data-toggle="lightbox" data-gallery="seo-images">
+                                        <img src="{% static 'images/screens/sdree/sdree-buyers-guide.png' %}"
+                                             class="img-responsive">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row push-60-t">
+                        <div class="col-md-3">
+                            <h3 class="push-40-t text-primary h3-alt font-w400 font-s14">RETS</h3>
+                        </div>
+                        <div class="col-md-9">
+                            <p class="push-30-t font-s18">
+                                The biggest challenge in this build was creating a
+                                backend that can sync, store and normalize listing data
+                                for a massive real estate market. Having no prior
+                                experience working with RETS (the data serialization
+                                standard for real estate) made this challenge especially
+                                difficult.
+
+                            </p>
+                            <p class="push-15-t font-s18">
+                                Although RETS ably provides normalized sources of real
+                                estate listing data across US markets, it is deeply
+                                lacking in accessible documentation. On a small timeframe,
+                                I had to learn to search, download and normalize the data
+                                stream from the local RETS server.
+                            </p>
+                            <p class="push-15-t font-s18">
+                                With effort, I managed to create a Django application
+                                that can regularly search, download and normalize listing
+                                data into models that enable more robust, programmatic
+                                access than would otherwise be possible.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row push-60-t">
+                        <div class="col-md-3">
+                            <h3 class="push-40-t text-primary h3-alt font-w400 font-s14">SEARCH</h3>
+                        </div>
+                        <div class="col-md-9">
+                            <p class="push-30-t font-s18">
+                                After completing the data-gathering application, the next
+                                challenge was to create something useful with it. Taking
+                                inspiration from national real estate search engines, I
+                                created a powerful search tool that uses Django, jQuery,
+                                Google Maps API and AJAX.
+                            </p>
+                            <ul class="solution-images-carousel">
+                                <li>
+                                    <a href="{% static 'images/screens/sdree/sdree-search-results.png' %}"
+                                       data-toggle="lightbox" data-gallery="search-images">
+                                        <img src="{% static 'images/screens/sdree/sdree-search-results.png' %}"
+                                             class="img-responsive">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% static 'images/screens/sdree/sdree-listing-detail-main.png' %}"
+                                       data-toggle="lightbox" data-gallery="search-images">
+                                        <img src="{% static 'images/screens/sdree/sdree-listing-detail-main.png' %}"
+                                             class="img-responsive">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% static 'images/screens/sdree/sdree-listing-detail-modal.png' %}"
+                                       data-toggle="lightbox" data-gallery="search-images">
+                                        <img src="{% static 'images/screens/sdree/sdree-listing-detail-modal.png' %}"
+                                             class="img-responsive">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% static 'images/screens/sdree/sdree-listing-detail-second.png' %}"
+                                       data-toggle="lightbox" data-gallery="search-images">
+                                        <img src="{% static 'images/screens/sdree/sdree-listing-detail-second.png' %}"
+                                             class="img-responsive">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% static 'images/screens/sdree/sdree-listing-detail-last.png' %}"
+                                       data-toggle="lightbox" data-gallery="search-images">
+                                        <img src="{% static 'images/screens/sdree/sdree-listing-detail-last.png' %}"
+                                             class="img-responsive">
+                                    </a>
+                                </li>
+                            </ul>
+                            <p class="push-15-t font-s18">
+                                Users can search for homes for sale by city, neighborhood
+                                or zip code, and can filter the results by features,
+                                commuting distance to user-specified locations, or other
+                                property meta details. Please feel free to pick apart the
+                                frontend code at <a href="http://sdrealestate.expert/search/">
+                                http://sdrealestate.expert/search
+                            </a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="project-pagination visible-sm visible-xs">
+            <p>
+                <a href="{% url 'upsell-realtor' %}" class="text-primary">
+                    Next Project ≫
+                </a>
+            </p>
+        </div>
+        <div class="push-60-t">&nbsp;</div>
+    </section>
+
+{% endblock body %}
+{% block extra_js %}
+    <!-- Vendor scripts -->
+    <script src="{% static 'js/vendor/jquery-ui.min.js' %}"></script>
+    <script src="{% static 'js/vendor/ScrollMagic.min.js' %}"></script>
+    <script src="{% static 'js/vendor/ekko-lightbox.min.js' %}"></script>
+    <script src="{% static 'js/vendor/slick.min.js' %}"></script>
+
+    {#    <script src="{% static 'js/vendor/plugins/debug.addIndicators.min.js' %}"></script>#}
+    <!-- App scripts -->
+    <script src="{% static 'js/app/project.min.js' %}"></script>
+{% endblock extra_js %}

@@ -1,0 +1,377 @@
+{% extends 'base.html' %}
+{% load static %}
+<!-- START head -->
+{% block title %}
+    Snapnote | Notes App Concept With Self-Destruct Abilities | Brian Girer - Product Designer & Full Stack Developer
+{% endblock title %}
+
+{% block extra_meta %}
+    <meta name="twitter:image" content="{% static 'images/heros/snapnote.jpg' %}">
+    <meta property="og:image" content="{% static 'images/heros/snapnote.jpg' %}">
+{% endblock extra_meta %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/vendor/jquery-ui.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/slick.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/slick-theme.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/ekko-lightbox.min.css' %}">
+{% endblock extra_css %}
+<!-- END head -->
+<!-- START body -->
+{% block body %}
+    {% include 'navbar.html' %}
+    <div class="project-navigation" id="project-navigation" hidden>
+        <div class="container-fluid">
+            <h1 class="font-s28 push-60-t font-w400">Snapnote</h1>
+            <div class="project-navigation__links push-40-t">
+                <p><a href="#" data-target="#project-scope">Project Scope</a></p>
+                <p class="push-15-t"><a href="#" data-target="#research">Research</a></p>
+                <p class="push-15-t"><a href="#" data-target="#color-palette">Color Palette</a></p>
+                <p class="push-15-t"><a href="#" data-target="#typography">Typography</a></p>
+                <p class="push-15-t"><a href="#" data-target="#solution">Solution</a></p>
+            </div>
+            <div class="project-pagination">
+                <p>
+                    <a href="{% url 'casa' %}" class="text-primary">
+                        Next Project ≫
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <section class="project-hero" style="background-image: url({% static 'images/heros/snapnote.jpg' %})">
+    </section>
+    <section class="project-details">
+        <div class="container-fluid push-60-t">
+            <div class="project-scope" id="project-scope">
+                <h2 class="text-default text-center">A Better Notes App</h2>
+                <p class="lead text-primary-darker text-center push-40-t">
+                    A concept for a notes app without the clutter.
+                </p>
+                <ul class="project-scope-list">
+                    <li>
+                        Taking notes is one of the most common uses of mobile phones. From
+                        Evernote, <a
+                            href="http://indianexpress.com/article/technology/tech-news-technology/evernote-reaches-5-million-users/"
+                            target="_blank" class="text-primary">
+                        with over 25 million users</a>, to native OS apps, note taking is nearly
+                        ubiquitous among mobile users.
+                    </li>
+                    <li>
+                        However, no app on the market has attempted to solve one of
+                        the biggest problems with the mobile note-taking experience:
+                        clutter.
+                    </li>
+                    <li>
+                        Our mobile notebooks are full of irrelevant and dated snippets
+                        of information, making it difficult to find the content that counts.
+
+                    </li>
+                    <li>
+                        Snapnote is a re-imagination of how we take notes on our
+                        phones. Taking inspiration from Snapchat's disappearing messages,
+                        newly created notes are on a self-destruct timer. By automatically
+                        removing infrequently accessed notes, Snapnote eliminates notebook
+                        clutter.
+                    </li>
+                </ul>
+            </div>
+            <div class="project-solution push-60-t" id="research">
+                <h2 class="text-default text-center">Research</h2>
+                <div class="row push-60-t project-solution-container">
+                    <div class="col-md-10">
+                        <p class="font-s18">
+                            Before starting the wireframes for Snapnote, I conducted
+                            research to help validate (or invalidate) the need for such an
+                            application. Before long, I came across several studies about
+                            how computer and mobile users take notes. The findings were
+                            encouraging.
+                        </p>
+                        <p class="font-s18 push-20-t">
+                            Digging into these studies, I discovered a trove of evidence
+                            for the exact problems Snapnote would solve:
+                        </p>
+                    </div>
+                </div>
+                <ul class="project-scope-list">
+                    <li>
+                        <strong>Key Finding 1:</strong> People don't revisit most of the
+                        notes that they take. According to
+                        <a href="http://ieeexplore.ieee.org/document/7106404/"
+                           target="_blank">a study published in the
+                            IEEE Computer Graphics and Applications journal</a>, 70% of
+                        notes we take on our phones aren't edited again only one day after
+                        we create them. In other words, most of the notes on our phones
+                        provide no information we'll ever need again.
+                    </li>
+                    <li>
+                        <strong>Key Finding 2:</strong> <a
+                            href="http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=080FCA480E0C4553320683E7B71C6E6E?doi=10.1.1.408.1452&rep=rep1&type=pdf"
+                            target="_blank">
+                        Another study, from UMBC,</a> found that one common thread in how
+                        people jot down "micronotes" is that the activity has "a need to
+                        capture information quickly with minimal effort in unexpected
+                        environments." So, Snapnote's UI needed to create as few barriers to
+                        creating a new note as possible.
+                    </li>
+                </ul>
+            </div>
+            <div class="project-color-palette push-60-t" id="color-palette">
+                <h2 class="text-default text-center">Color Palette</h2>
+                <div class="row color-palettes">
+                    <div class="col-sm-6">
+                        <img src="{% static 'images/color-palettes/snapnote/main-color@2x.png' %}" alt=""
+                             class="img-responsive">
+                        <h4 class="text-center caption">Mountain Meadow</h4>
+                    </div>
+                    <div class="col-sm-6">
+                        <img src="{% static 'images/color-palettes/snapnote/secondary-color@2x.png' %}" alt=""
+                             class="img-responsive">
+                        <h4 class="text-center caption">Chathams Blue</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="project-typography push-60-t" id="typography">
+                <h2 class="text-default text-center">Typography</h2>
+                <div class="row push-60-t">
+                    <div class="project-font__roboto col-sm-6">
+                        <h4 class="font-s32 font-w500">Roboto</h4>
+                        <p class="font-s28 push-15-t">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv
+                            Ww Xx Yy Zz</p>
+                    </div>
+                </div>
+                <div class="row push-20-t">
+                    <div class="project-font__avenir col-sm-6 col-md-offset-5 text-right">
+                        <h4 class="font-s32 font-w500">Avenir</h4>
+                        <p class="font-s28 push-15-t">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv
+                            Ww Xx Yy Zz</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project-solution push-60-t" id="solution">
+                <h2 class="text-default text-center">Solution</h2>
+                <div class="project-solution-container">
+                    <div class="row push-60-t">
+                        <div class="col-md-3">
+                            <h3 class="push-40-t text-primary h3-alt font-w400 font-s14">USER TESTING</h3>
+                        </div>
+                        <div class="col-md-9">
+                            <p class="push-30-t font-s18">
+                                I worked quickly to wireframe and prototype the first
+                                iteration of Snapnote. The result wasn’t great. But,
+                                thanks to helpful feedback from members of my local UX
+                                meetup, eventually I was able to distill the app down to a
+                                tiny set of interactions, resulting in a simple,
+                                human-friendly application.
+                            </p>
+                            <ul class="solution-images-carousel">
+                                <li>
+                                    <a href="{% static 'images/screens/snapnote/snapnote-v1-screen-1@2x.png' %}"
+                                       data-toggle="lightbox" data-gallery="snapnote-v1">
+                                        <img src="{% static 'images/screens/snapnote/snapnote-v1-screen-1.png' %}"
+                                             class="img-responsive">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% static 'images/screens/snapnote/snapnote-v1-screen-2@2x.png' %}"
+                                       data-toggle="lightbox" data-gallery="snapnote-v1">
+                                        <img src="{% static 'images/screens/snapnote/snapnote-v1-screen-2.png' %}"
+                                             class="img-responsive">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% static 'images/screens/snapnote/snapnote-v1-screen-3@2x.png' %}"
+                                       data-toggle="lightbox" data-gallery="snapnote-v1">
+                                        <img src="{% static 'images/screens/snapnote/snapnote-v1-screen-3.png' %}"
+                                             class="img-responsive">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% static 'images/screens/snapnote/snapnote-v1-screen-4@2x.png' %}"
+                                       data-toggle="lightbox" data-gallery="snapnote-v1">
+                                        <img src="{% static 'images/screens/snapnote/snapnote-v1-screen-4.png' %}"
+                                             class="img-responsive">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% static 'images/screens/snapnote/snapnote-v1-screen-5@2x.png' %}"
+                                       data-toggle="lightbox" data-gallery="snapnote-v1">
+                                        <img src="{% static 'images/screens/snapnote/snapnote-v1-screen-5.png' %}"
+                                             class="img-responsive">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row push-60-t">
+                        <div class="col-md-3">
+                            <h3 class="push-40-t text-primary h3-alt font-w400 font-s14">THE PLAN</h3>
+                        </div>
+                        <div class="col-md-9">
+                            <p class="push-30-t font-s18">
+                                Since Snapnote is built around the quick thoughts and
+                                memos we jot down throughout the day, the interface
+                                doesn’t allow for robust organizational or note-taking
+                                tools. A user would be able to create three types of
+                                notes: plain text, bulleted list or photo.
+                            </p>
+                            <p class="push-15-t font-s18">
+                                Each new note would automatically self-destruct after one
+                                week. If a user wants to keep a note for longer, they can
+                                refresh the countdown timer. If they want to remove a note
+                                earlier, there is an option to manually delete.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row push-60-t">
+                        <div class="col-md-3">
+                            <h3 class="push-40-t text-primary h3-alt font-w400 font-s14">TRY, TRY AGAIN</h3>
+                        </div>
+                        <div class="col-md-9">
+                            <p class="push-30-t font-s18">
+                                I went through 4 iterations of Snapnote before arriving at
+                                the final prototype. The first iteration offered too many
+                                options to the user, and kept the focus on existing notes
+                                instead of new ones. Though the next iteration changed the
+                                interface to a feed of notes, reducing clutter, it still
+                                afforded the user too many options.
+                            </p>
+                            <ul class="solution-images-carousel">
+                                <li>
+                                    <a href="{% static 'images/screens/snapnote/snapnote-v2-screen-1@2x.png' %}"
+                                       data-toggle="lightbox" data-gallery="snapnote-v2">
+                                        <img src="{% static 'images/screens/snapnote/snapnote-v2-screen-1.png' %}"
+                                             class="img-responsive">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% static 'images/screens/snapnote/snapnote-v2-screen-2@2x.png' %}"
+                                       data-toggle="lightbox" data-gallery="snapnote-v2">
+                                        <img src="{% static 'images/screens/snapnote/snapnote-v2-screen-2.png' %}"
+                                             class="img-responsive">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% static 'images/screens/snapnote/snapnote-v2-screen-3@2x.png' %}"
+                                       data-toggle="lightbox" data-gallery="snapnote-v2">
+                                        <img src="{% static 'images/screens/snapnote/snapnote-v2-screen-3.png' %}"
+                                             class="img-responsive">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% static 'images/screens/snapnote/snapnote-v2-screen-4@2x.png' %}"
+                                       data-toggle="lightbox" data-gallery="snapnote-v2">
+                                        <img src="{% static 'images/screens/snapnote/snapnote-v2-screen-4.png' %}"
+                                             class="img-responsive">
+                                    </a>
+                                </li>
+                            </ul>
+                            <p class="push-15-t font-s18">
+                                When demoing the second prototype to other designers, the
+                                feedback was generally positive. But, there was a motif
+                                that the app allowed the user to do too much. It wasn’t
+                                clear to testers what interactions were available, and
+                                many features complicated the experience more than they
+                                provided robustness.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row push-60-t">
+                        <div class="col-md-3">
+                            <h3 class="push-40-t text-primary h3-alt font-w400 font-s14">NOTES, UNCLUTTERED</h3>
+                        </div>
+                        <div class="col-md-9">
+                            <p class="push-30-t font-s18">
+                                The next iteration further removed interactions from the
+                                interface, but overcompensated with visual design. It
+                                replaced the numeric countdown timer was a gradient of
+                                dots from green to red, indicating the imminence of a
+                                note’s self-destruction, added more vibrant colors and
+                                shadows.
+                            </p>
+                            <ul class="solution-images-carousel">
+                                <li>
+                                    <a href="{% static 'images/screens/snapnote/snapnote-v3-screen-1@2x.png' %}"
+                                       data-toggle="lightbox" data-gallery="snapnote-v3">
+                                        <img src="{% static 'images/screens/snapnote/snapnote-v3-screen-1.png' %}"
+                                             class="img-responsive">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% static 'images/screens/snapnote/snapnote-v3-screen-2@2x.png' %}"
+                                       data-toggle="lightbox" data-gallery="snapnote-v3">
+                                        <img src="{% static 'images/screens/snapnote/snapnote-v3-screen-2.png' %}"
+                                             class="img-responsive">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% static 'images/screens/snapnote/snapnote-v3-screen-3@2x.png' %}"
+                                       data-toggle="lightbox" data-gallery="snapnote-v3">
+                                        <img src="{% static 'images/screens/snapnote/snapnote-v3-screen-3.png' %}"
+                                             class="img-responsive">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% static 'images/screens/snapnote/snapnote-v3-screen-4@2x.png' %}"
+                                       data-toggle="lightbox" data-gallery="snapnote-v3">
+                                        <img src="{% static 'images/screens/snapnote/snapnote-v3-screen-4.png' %}"
+                                             class="img-responsive">
+                                    </a>
+                                </li>
+                            </ul>
+                            <p class="push-15-t font-s18">
+                                This version was close, but still too complex. Now, the
+                                interaction schema had almost achieved an ideal level of
+                                simplicity, but the interface felt over-designed. I
+                                changed to countdown dot gradient to a text timer and
+                                reduced the color vibrancies.
+                            </p>
+                            <ul class="solution-images-carousel">
+                                <li>
+                                    <a href="{% static 'images/screens/snapnote/snapnote-v4-screen-1@2x.png' %}"
+                                       data-toggle="lightbox" data-gallery="snapnote-v4">
+                                        <img src="{% static 'images/screens/snapnote/snapnote-v4-screen-1.png' %}"
+                                             class="img-responsive">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% static 'images/screens/snapnote/snapnote-v4-screen-2@2x.png' %}"
+                                       data-toggle="lightbox" data-gallery="snapnote-v4">
+                                        <img src="{% static 'images/screens/snapnote/snapnote-v4-screen-2.png' %}"
+                                             class="img-responsive">
+                                    </a>
+                                </li>
+                            </ul>
+                            <p class="push-15-t font-s18">
+                                The result was an almost astonishingly simple interface.
+                                The app only required two screen mockups to demonstrate
+                                the entire prototype. What Snapnote lacks in robustness,
+                                it generously compensates for with simplicity, speed and
+                                clarity.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="project-pagination visible-sm visible-xs">
+            <p>
+                <a href="{% url 'casa' %}" class="text-primary">
+                    Next Project ≫
+                </a>
+            </p>
+        </div>
+        <div class="push-60-t">&nbsp;</div>
+    </section>
+
+{% endblock body %}
+{% block extra_js %}
+    <!-- Vendor scripts -->
+    <script src="{% static 'js/vendor/jquery-ui.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/vendor/ScrollMagic.min.js' %}" type="text/javascript"></script>
+    <script type="text/javascript" src="{% static 'js/vendor/slick.min.js' %}"></script>
+    <script src="{% static 'js/vendor/ekko-lightbox.min.js' %}" type="text/javascript"></script>
+    {#    <script src="{% static 'js/vendor/plugins/debug.addIndicators.min.js' %}"></script>#}
+    <!-- App scripts -->
+    <script src="{% static 'js/app/project.min.js' %}"></script>
+{% endblock extra_js %}

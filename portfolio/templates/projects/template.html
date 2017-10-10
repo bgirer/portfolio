@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+{% load static %}
+<!-- START head -->
+{% block title %}
+{% endblock title %}
+
+{% block extra_meta %}
+{% endblock extra_meta %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/vendor/jquery-ui.min.css' %}">
+{% endblock extra_css %}
+<!-- END head -->
+<!-- START body -->
+{% block body %}
+    {% include 'navbar.html' %}
+    <div class="project-navigation" id="project-navigation" hidden>
+        <div class="container-fluid">
+            <h1 class="font-s28 push-60-t font-w400">PROJECT TITLE</h1>
+            <div class="project-navigation__links push-40-t">
+                <p><a href="#" data-target="#project-scope">Project Details</a></p>
+                <p class="push-15-t"><a href="#" data-target="#color-palette">Color Palette</a></p>
+                <p class="push-15-t"><a href="#" data-target="#typography">Typography</a></p>
+                <p class="push-15-t"><a href="#" data-target="#solution">Solution</a></p>
+            </div>
+        </div>
+    </div>
+    <section class="project-hero" style="background-image: url({% static 'images/project-hero-placeholder.jpg' %})">
+    </section>
+    <section class="project-details">
+        <div class="container-fluid push-60-t">
+            <div class="project-scope" id="project-scope">
+                <h2 class="text-default text-center">Project Scope</h2>
+                <p class="lead text-primary-darker text-center push-40-t">Varnish twelve pounds of onion in one cup of condensed milk.</p>
+                <ul class="project-scope-list">
+                    <li>
+                        When the sail stutters for east india, all waves fight addled, shiny captains. Dead, lively shores begrudgingly raid a weird, wet shipmate. The ale hauls with faith, view the bikini atoll before it grows.
+                    </li>
+                    <li>
+                       All children like fluffed onions in cocktail sauce and cayenne pepper. Shred two mackerels, steak, and flower in a large wok over medium heat, heat for twelve minutes and blend with some butter. Bourbon soup is just not the same without vegemite and large sour caviars.
+                    </li>
+                    <li>
+                       Nunquam locus idoleum. If you experiment or travel with an apostolic silence, man follows you. To some, a spirit is an enlightenment for handling.
+                    </li>
+                    <li>
+                        Yes, there is mysterious places, it experiments with death. Monkeys, moons, and celestine creators will always protect them. The art of your enlightenments will ease safely when you facilitate that politics is the believer.
+                    </li>
+                </ul>
+            </div>
+            <div class="project-color-palette push-60-t" id="color-palette">
+                <h2 class="text-default text-center">Color Palette</h2>
+                <div class="row color-palettes">
+                    <div class="col-md-6">
+                        <img src="{% static 'images/color-palettes/upsell-realtor/main-color@2x.png' %}" alt=""
+                             class="img-responsive">
+                        <h4 class="text-center caption">Color name</h4>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="{% static 'images/color-palettes/upsell-realtor/secondary-color@2x.png' %}" alt=""
+                             class="img-responsive">
+                        <h4 class="text-center caption">Color name</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="project-typography push-60-t" id="typography">
+                <h2 class="text-default text-center">Typography</h2>
+                <div class="row push-60-t">
+                    <div class="project-font__source-sans col-md-6">
+                        <h4 class="font-s32 font-w500">Font Name</h4>
+                        <p class="font-s28 push-15-t">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv
+                            Ww Xx Yy Zz</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project-solution push-60-t" id="solution">
+                <h2 class="text-default text-center">Solution</h2>
+                <div class="project-solution-container">
+                    <div class="row push-60-t">
+                        <div class="col-md-3">
+                            <h3 class="push-40-t text-primary h3-alt font-w400 font-s14">TITLE</h3>
+                        </div>
+                        <div class="col-md-7">
+                            <p class="push-30-t font-s18">
+
+                            </p>
+                            <p class="push-15-t font-s18">
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row push-60-t">
+                        <div class="col-md-3">
+                            <h3 class="push-40-t text-primary h3-alt font-w400 font-s14">TITLE</h3>
+                        </div>
+                        <div class="col-md-7">
+                            <p class="push-30-t font-s18">
+
+                            </p>
+                            <p class="push-15-t font-s18">
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row push-60-t">
+                        <div class="col-md-3">
+                            <h3 class="push-40-t text-primary h3-alt font-w400 font-s14">TITLE</h3>
+                        </div>
+                        <div class="col-md-7">
+                            <p class="push-30-t font-s18">
+
+                            </p>
+                            <p class="push-15-t font-s18">
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="push-60-t">&nbsp;</div>
+    </section>
+
+{% endblock body %}
+{% block extra_js %}
+    <!-- Vendor scripts -->
+    <script src="{% static 'js/vendor/jquery-ui.min.js' %}"></script>
+    <script src="{% static 'js/vendor/ScrollMagic.min.js' %}"></script>
+    {#    <script src="{% static 'js/vendor/plugins/debug.addIndicators.min.js' %}"></script>#}
+    <!-- App scripts -->
+    <script src="{% static 'js/app/project.min.js' %}"></script>
+{% endblock extra_js %}
