@@ -1,11 +1,8 @@
 var gulp = require('gulp');
 var gutil = require('gulp-util');
-var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var uglifycss = require('gulp-uglifycss');
 var less = require('gulp-less');
-var es = require('event-stream');
-var merge = require('gulp-merge');
 var rename = require('gulp-rename');
 var imagemin = require('gulp-imagemin');
 

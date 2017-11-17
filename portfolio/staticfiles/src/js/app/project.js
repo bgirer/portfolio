@@ -5,14 +5,19 @@ $(function () {
             var windowWidth = $(window).width();
             if (windowWidth > 991) {
                 $('#project-navigation').show('slide', {direction: 'left'}, 300);
-                $('.project-details').addClass('pushed', 300, 'swing');
+                $('.project-details').addClass('pushed', 300, 'swing', function () {
+                    $('.solution-images-carousel').slick('setPosition');
+                });
             }
         })
         .on('leave', function () {
             var windowWidth = $(window).width();
             if (windowWidth > 991) {
                 $('#project-navigation').hide('slide', {direction: 'left'}, 300);
-                $('.project-details').removeClass('pushed', 300, 'swing');
+                $('.project-details').removeClass('pushed', 300, 'swing', function () {
+                    $('.solution-images-carousel').slick('setPosition');
+                });
+
             }
         })
         // .addIndicators() // add indicators (requires plugin)
@@ -45,7 +50,9 @@ $(function () {
     // Handle lightbox elements
     $(document).on('click', '[data-toggle="lightbox"]', function (event) {
         event.preventDefault();
-        $(this).ekkoLightbox({alwaysShowClose: true});
+        $(this).ekkoLightbox({
+            alwaysShowClose: true,
+        });
     });
     // Initiate slick sliders where necessary
     var $solutionSliders = $('.solution-images-carousel');
@@ -56,7 +63,8 @@ $(function () {
                 slidesToScroll: 1,
                 slidesToShow: 1,
                 arrows: false,
-                centerMode: true
+                centerMode: true,
+                centerPadding: '0px'
             });
         })
     }
