@@ -30,9 +30,7 @@ DEBUG = config('DEBUG', cast=bool, default='')
 allowed_hosts_default = 'localhost, 127.0.0.1'
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', default=allowed_hosts_default,
                        cast=lambda v: [s.strip() for s in v.split(',')])
-# Debug mode settings
-if DEBUG:
-    INTERNAL_IPS = ['127.0.0.1']
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -156,12 +154,16 @@ DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL',
 default_cache = 'redis://x:@127.0.0.1:6379'
 redis_url = urlparse.urlparse(config('REDIS_URL', default=default_cache))
 
+# Environment-dependent settings
 if DEBUG:
     CACHES = {
         'default': {
             'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
         }
     }
+    INSTALLED_APPS.append('debug_toolbar')
+    MIDDLEWARE_CLASSES += ('debug_toolbar.middleware.DebugToolbarMiddleware',)
+    INTERNAL_IPS = ['127.0.0.1', 'localhost']
 else:
     CACHES = {
         'default': {
@@ -179,7 +181,6 @@ else:
             },
         },
     }
-if not DEBUG:
     LOGGING = {
         'version': 1,
         'disable_existing_loggers': False,
@@ -219,8 +220,3 @@ if not DEBUG:
             },
         }
     }
-
-if DEBUG:
-    INSTALLED_APPS.append('debug_toolbar')
-    MIDDLEWARE_CLASSES += ('debug_toolbar.middleware.DebugToolbarMiddleware', )
-    INTERNAL_IPS = ['127.0.0.1', 'localhost']
